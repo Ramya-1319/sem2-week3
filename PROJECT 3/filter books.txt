@@ -1,0 +1,3 @@
+-- Filter books based on genre and availability (e.g., Genre = 'Fiction' and Available = TRUE)
+SELECT * FROM Books 
+WHERE Genre = 'Fiction' AND Available = TRUE;

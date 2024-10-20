@@ -1,0 +1,4 @@
+-- Use AND/OR to find books by genre and publication year (assuming we have a publication year field)
+SELECT * FROM Books 
+WHERE (Genre = 'Fiction' AND PublicationYear = 2022) 
+   OR (Genre = 'Science' AND PublicationYear = 2023);

@@ -1,0 +1,7 @@
+-- Delete members who have not borrowed a book in the last year
+DELETE FROM Members 
+WHERE MemberID NOT IN (
+    SELECT DISTINCT MemberID 
+    FROM Loans 
+    WHERE LoanDate >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
+);

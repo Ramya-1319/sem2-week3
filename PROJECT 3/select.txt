@@ -1,0 +1,2 @@
+-- Select all books by a specific author (e.g., AuthorID = 1)
+SELECT * FROM Books WHERE AuthorID = 1;

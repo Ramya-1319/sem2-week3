@@ -1,0 +1,8 @@
+SELECT Employees.FirstName, Employees.LastName, Orders.Amount 
+FROM Employees 
+INNER JOIN Orders ON Employees.EmployeeID = Orders.CustomerID;
+
+
+SELECT Employees.FirstName, Employees.LastName, Orders.Amount 
+FROM Employees 
+LEFT JOIN Orders ON Employees.EmployeeID = Orders.CustomerID;

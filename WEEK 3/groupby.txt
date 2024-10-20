@@ -1,0 +1,4 @@
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY Department;
+
+
+SELECT CustomerID, SUM(Amount) AS TotalOrderAmount FROM Orders GROUP BY CustomerID;

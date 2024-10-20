@@ -1,0 +1,35 @@
+-- Create the Authors collection
+CREATE TABLE Authors (
+    AuthorID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50)
+);
+
+-- Create the Books collection
+CREATE TABLE Books (
+    ISBN VARCHAR(20) PRIMARY KEY,
+    Title VARCHAR(100),
+    AuthorID INT,
+    Genre VARCHAR(50),
+    Available BOOLEAN,
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID)
+);
+
+-- Create the Members collection
+CREATE TABLE Members (
+    MemberID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    JoinDate DATE
+);
+
+-- Create the Loans collection
+CREATE TABLE Loans (
+    LoanID INT PRIMARY KEY,
+    MemberID INT,
+    ISBN VARCHAR(20),
+    LoanDate DATE,
+    ReturnDate DATE,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (ISBN) REFERENCES Books(ISBN)
+);

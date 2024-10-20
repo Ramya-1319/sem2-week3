@@ -1,0 +1,4 @@
+SELECT * FROM Employees ORDER BY LastName ASC;
+
+
+SELECT * FROM Orders ORDER BY Amount DESC;

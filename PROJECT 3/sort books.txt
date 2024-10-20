@@ -1,0 +1,8 @@
+-- Sort books by title in ascending order
+SELECT * FROM Books ORDER BY Title ASC;
+
+-- Sort books by author name (assuming we join with Authors)
+SELECT Books *, Authors.FirstName, Authors.LastName 
+FROM Books 
+JOIN Authors ON Books.AuthorID = Authors.AuthorID 
+ORDER BY Authors.LastName ASC;

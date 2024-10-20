@@ -1,0 +1,4 @@
+-- Update the availability status of a book when it is loaned out (e.g., ISBN = '978-3-16-148410-0')
+UPDATE Books 
+SET Available = FALSE 
+WHERE ISBN = '978-3-16-148410-0';

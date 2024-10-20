@@ -1,0 +1,5 @@
+-- Group books by genre and count how many books are available in each genre
+SELECT Genre, COUNT(*) AS AvailableBooks 
+FROM Books 
+WHERE Available = TRUE 
+GROUP BY Genre;
